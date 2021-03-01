@@ -1,0 +1,22 @@
+body{
+  background-color: rgb(228, 230, 231);
+}
+
+#orders-total{
+  background-color: rgb(51, 65, 114) 
+}
+
+#orders-delivered{
+  background-color:  #255f8b
+}
+
+#orders-pending{
+  background-color: #5593c5
+}
+
+#logo{
+  font-size: 18px;
+  letter-spacing: 6px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+

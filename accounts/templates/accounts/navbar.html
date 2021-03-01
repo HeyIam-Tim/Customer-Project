@@ -1,0 +1,31 @@
+
+<style>
+  .hello-msg{
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px;
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" id="logo" href="{% url 'home' %}">Accounts</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      {% if request.user.is_staff %}
+      <a class="nav-item nav-link active" href="{% url 'home' %}">Dashboard</a>
+      <a class="nav-item nav-link" href="{% url 'products' %}">Products</a>
+      {% else %}
+      <li class="nav-item">
+      <a href="{% url 'account' %}" class="nav-link">Settings</a>
+      </li>
+      {% endif %}
+    </div>
+  </div>
+
+  <span class="hello-msg">Hello, {{ request.user }}</span>
+  <span><a class="hello-msg" href="{% url 'logout' %}" class="">Logout</a></span>
+
+</nav>
