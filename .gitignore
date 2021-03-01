@@ -1,0 +1,5 @@
+.replit
+poetry.lock
+pyproject.toml
+requirements.txt
+.DS_Store
